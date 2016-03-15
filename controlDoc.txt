@@ -1,11 +1,13 @@
 CONTROL
 
-	Rwe		Rdst	ALUinB		ALUop	DMwe	RWD 	ShiftE
-Add  1		1		0			00		0 		0 		0
-Addi 1      0       1           00      0       0 		0
-Sub  1		1		0 			01		0  		0 		0
-and  1		1		0 			10		0  		0 		0
-xor  1		1		0 			10		0  		0 		0
-lw   1 		0 		1 			00		0 		1 		0
-sw   0 		0 		1 			00 		1 		0 		0
-sll	 1 		1 		0 			00 		0 		0 		1 	
+	Rwe		Rdst	ALUinB		ALUop	DMwe	RWD 	ShiftE	ShiftL
+Add  1		1		0			00		0 		0 		0 		0
+Addi 1      0       1           00      0       0 		0 		0
+Sub  1		1		0 			01		0  		0 		0 		0
+and  1		1		0 			10		0  		0 		0 		0
+xor  1		1		0 			10		0  		0 		0 		0
+lw   1 		0 		1 			00		0 		1 		0 		0
+sw   0 		0 		1 			00 		1 		0 		0 		0
+sll	 1 		1 		0 			00 		0 		0 		1 		1
+sra	 1 		1 		0 			00 		0 		0 		1 		0
+

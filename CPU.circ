@@ -1903,7 +1903,9 @@ a401 410 903f 1fc1 903f 72c0 f600 1241
       <a name="tristate" val="false"/>
       <a name="label" val="DMro"/>
     </comp>
-    <comp loc="(980,490)" name="3-bit SLL"/>
+    <comp loc="(980,490)" name="3-bit SLL">
+      <a name="label" val="ShiftLeft"/>
+    </comp>
     <comp lib="0" loc="(80,240)" name="Tunnel">
       <a name="width" val="16"/>
       <a name="label" val="jrrd"/>
@@ -1947,7 +1949,7 @@ a401 410 903f 1fc1 903f 72c0 f600 1241
   </circuit>
   <circuit name="3-bit SLL">
     <a name="circuit" val="3-bit SLL"/>
-    <a name="clabel" val="ShiftLeft"/>
+    <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>

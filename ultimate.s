@@ -2,7 +2,7 @@
 #will attempt to test as many instructions as possible
 #r1 will be the string pointer always
 #r2 will contain a char
-ldia $r1, jalPass
+ldia $r1, jalPass  #if printing works at all, that means jal, lw, beq, j, jr, and output are all correct
 jal print
 
 ldia $r1, lwPass
@@ -20,7 +20,7 @@ jal print
 ldia $r1, outputPass
 jal print
 
-addi $r3, $r0, 5
+addi $r3, $r0, 5   #addi
 addi $r4, $r0, 4
 addi $r4, $r4, 2
 addi $r4, $r4, -1
@@ -32,7 +32,7 @@ beqPassFunc:
 ldia $r1, addiPass
 jal print
 
-add $r3, $r3, $r4
+add $r3, $r3, $r4   #add
 addi $r4, $r4, 5
 beq $r3, $r4, addPassFunc
 ldia $r1, addFail
@@ -42,7 +42,7 @@ addPassFunc:
 ldia $r1, addPass
 jal print
 
-sub $r5, $r3, $r3
+sub $r5, $r3, $r3   #sub
 sub $r4, $r3, $r4
 beq $r4, $r5, subPassFunc
 ldia $r1, subFail
@@ -52,7 +52,7 @@ subPassFunc:
 ldia $r1, subPass
 jal print
 
-addi $r3, $r0, 1
+addi $r3, $r0, 1   #sll
 sll $r3, $r3, 6
 addi $r4, $r0, 31
 addi $r4, $r4, 31
@@ -65,7 +65,7 @@ sllPassFunc:
 ldia $r1, sllPass
 jal print
 
-sra $r3, $r3, 6
+sra $r3, $r3, 6   #sra
 addi $r3, $r3, -1
 beq $r3, $r0, sraPassFunc
 ldia $r1, sraFail
@@ -75,7 +75,7 @@ sraPassFunc:
 ldia $r1, sraPass
 jal print
 
-addi $r3, $r0, 1
+addi $r3, $r0, 1    #and
 sll $r3, $r3, 7
 addi $r3, $r3, -1
 addi $r4, $r0, 1
@@ -93,7 +93,7 @@ andPassFunc:
 ldia $r1, andPass
 jal print
 
-addi $r3, $r0, 1
+addi $r3, $r0, 1    #xor
 sll $r3, $r3, 6
 addi $r4, $r0, 24
 xor $r5, $r3, $r4
@@ -108,7 +108,7 @@ xorPassFunc:
 ldia $r1, xorPass
 jal print
 
-addi $r3, $r0, 5
+addi $r3, $r0, 5    #sw
 sll $r3, $r3, 6
 sll $r3, $r3, 6 #$r3 is now 101000000000000 = 0x5000 bottom of the heap
 addi $r4, $r0, 1
@@ -122,7 +122,7 @@ swPassFunc:
 ldia $r1, swPass
 jal print
 
-addi $r3, $r0, -23
+addi $r3, $r0, -23    #blt
 addi $r4, $r0, -24
 blt $r4, $r3, bltPassFunc
 ldia $r1, bltFail
@@ -132,7 +132,7 @@ bltPassFunc:
 ldia $r1, bltPass
 jal print
 
-ldia $r1, complete
+ldia $r1, complete   #final confirmation
 jal print
 
 halt

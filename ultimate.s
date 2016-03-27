@@ -3,8 +3,8 @@
 #r1 will be the string pointer always
 #r2 will contain a char
 ldia $r1, jalPass  #if printing works at all, that means jal, lw, beq, j, jr, and output are all correct
-jal print
-
+jal print          #from 0x0000 to 0x0007, then jump to 0x0117 (print) If that does not occur, then something wrong
+				   #with jal
 ldia $r1, lwPass
 jal print
 
@@ -138,15 +138,15 @@ jal print
 halt
 
 print:
-lw $r2, 0($r1)
-output $r2
-addi $r1, $r1, 1
-beq $r0, $r2, done
-j print
-done:
-addi $r2, $r0, 10  #newline
-output $r2
-jr $r7
+lw $r2, 0($r1)  #PC: 0x0117
+output $r2           #0x0118
+addi $r1, $r1, 1     #0x0119
+beq $r0, $r2, done   #0x011a
+j print              #0x011b
+done:                
+addi $r2, $r0, 10  #newline 0x011c
+output $r2         #0x011d
+jr $r7             #0x011e
 
 .data
 addPass: .asciiz "add: Pass :)"

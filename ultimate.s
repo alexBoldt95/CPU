@@ -1,4 +1,5 @@
 .text
+#Author: Alex Boldt
 #will attempt to test as many instructions as possible
 #r1 will be the string pointer always
 #r2 will contain a char

@@ -1,4 +1,5 @@
 .text
+#Author: Alex Boldt
 #type in something into the keyboard and then run the clock, text should be consumed and printed out on the TTY.
 addi $r2, $r0, 1  #initializing #r2 to 128 and the bottom of the heap into #r3
 sll $r2, $r2, 7   # $r2 now contains 128

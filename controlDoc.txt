@@ -1,5 +1,21 @@
 CONTROL
 
+Rwe: Write to registers
+Rdst: 1=write to $rd; 0=write to $rt
+ALUinB: ALU takes input from Rs and I-Immediate
+ALUop: Operation of ALU; 00=add, 01=sub, 10=and, 11=xor
+DMwe: Data memory write enable, 1=write to RAM
+RWD: Register write from data, 1=value to write register comes from RAM
+ShiftE: Shift enable, 1= rd = shifted(rs)
+ShiftL: Shift Left, 1= shift left, 0 = shift right
+BR: Branch enable, PC = PC + 1 + B
+BLT: Branch less than, 1=BLT, 0=BEQ
+J: Jump enable, PC = L
+JR: Jump to register enable: PC = $rd
+JAL: Jump and Link enable: PC = L, $r7 = PC + 1
+INPUTC: Input control, 1=register write data comes from keyboard
+OUTPUTC: Output control, TTY display outputs char in $rs
+
 	Rwe		Rdst	ALUinB		ALUop	DMwe	RWD 	ShiftE	ShiftL BR 	BLT		J 	JR 	  JAL 	INPUTC OUTPUTC
 Add  1		1		0			00		0 		0 		0 		0 		0 	0 		0 	0 		0 	0 		0
 Addi 1      0       1           00      0       0 		0 		0 		0 	0 		0 	0 		0 	0 		0

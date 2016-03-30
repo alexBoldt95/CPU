@@ -1,4 +1,5 @@
 .text
+#Author: Alex Boldt (I'm ashamed of this creation)
 #prints "and the bass keeps runnin runnin and runnin runnin... forever"
 ldia $r1, thebeat
 ldia $r2, runnin

@@ -1,6 +1,6 @@
 Name: Alex Boldt
 Hours spent: ~30
-Consulted With: Felix Kung
+Consulted With: Felix Kung, Ademola Olayinka, Teddy Franceschi, David Brenes Rodriguez, Neshmeen Fatimah
 Resources Used: Lecture Slides
 
 Start the clock on low when running.

@@ -124,7 +124,37 @@ jal print
 
 addi $r3, $r0, -23    #blt
 addi $r4, $r0, -24
-blt $r4, $r3, bltPassFunc
+addi $r5, $r0, 1   #assert true
+addi $r2, $r0, 0   #contains answer
+firstCheck:
+blt $r4, $r3, firstLoad
+addi $r2, $r0, 0
+and $r5, $r5, $r2
+j secondCheck
+firstLoad:
+addi $r2, $r0, 1
+and $r5, $r5, $r2
+secondCheck:
+addi $r4, $r4, 1
+blt $r4, $r3, secondLoad
+addi $r2, $r0, 1
+and $r5, $r5, $r2
+j thirdCheck
+secondLoad:
+addi $r2, $r0, 0
+and $r5, $r2, $r2
+thirdCheck:
+addi $r4, $r4, 1
+blt $r4, $r3, thirdLoad
+addi $r2, $r0, 1
+and $r5, $r5, $r2
+j end
+thirdLoad:
+addi $r2, $r0, 1
+and $r5, $r2, $r2
+end:
+addi $r2, $r0, 1
+beq $r5, $r2, bltPassFunc
 ldia $r1, bltFail
 jal print
 halt
